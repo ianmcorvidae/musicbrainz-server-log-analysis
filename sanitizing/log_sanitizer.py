@@ -40,7 +40,7 @@ def hash(salt, value):
     return hash_memo[key]
 
 def do_hash(key):
-    return base64.b64encode_urlsafe(hashlib.sha1(key).digest())
+    return base64.urlsafe_b64encode(hashlib.sha1(key).digest())
 
 # Replace function for re.sub()
 # Takes the named group for the given field
